@@ -1,1 +1,17 @@
+<div class="filter-container">
+    <h3>Filter Posts</h3>
 
+    <label for="price-filter">Price:</label>
+    <input type="number" id="price-filter" placeholder="Max Price" value="{{priceFilter}}">
+
+    <label for="city-filter">City:</label>
+    <input type="text" id="city-filter" placeholder="City" value="{{cityFilter}}">
+
+    <label for="condition-filter">Condition:</label>
+    <select id="condition-filter">
+        <option value="new" {{#if (eq conditionFilter "new")}}selected{{/if}}>New</option>
+        <option value="used" {{#if (eq conditionFilter "used")}}selected{{/if}}>Used</option>
+    </select>
+
+    <button class="apply-filters" id="apply-filters">Apply Filters</button>
+</div>
