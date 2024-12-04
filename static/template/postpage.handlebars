@@ -1,15 +1,17 @@
 </header>
-<div class="single-post">
+
+<main class="content">
+  <section id="post">
     <div class="post-contents">
-        <div class="post-image-container">
-            <img src="{{photoURL}}" alt="{{description}}">
-        </div>
-        <div class="post-info-container">
-            <h2 class="post-title">{{description}}</h2>
-            <p class="post-price">${{price}}</p>
-            <p class="post-city">City: {{city}}</p>
-            <p class="post-condition">Condition: {{condition}}</p>
-            <p class="post-description">{{longDescription}}</p>
-        </div>
+      <div class="post-image-container">
+        <img src="{{photoURL}}" alt="{{description}}">
+      </div>
+      <div class="post-info-container">
+        <h2>{{description}}</h2>
+        <span class="post-price">${{price}}</span>
+        <span class="post-city">({{city}})</span>
+        <span class="post-condition">Condition: {{condition}}</span>
+      </div>
     </div>
-</div>
+  </section>
+</main>
