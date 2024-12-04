@@ -17,11 +17,11 @@ async function insertNewPost(description, photoURL, price, city, condition) {
 
     // Generates  post HTML using the template
     const postHTML = postTemplate({
-        description, "..."
-        photoURL, "..."
-        price, ...
-        city, "..."
-        condition "..."
+        description: description, 
+        photoURL: photoURL,
+        price: price,
+        city: city,
+        condition: condition
     });
 
     // Insert the generated HTML into the DOM
