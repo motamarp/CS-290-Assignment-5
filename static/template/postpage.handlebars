@@ -1,17 +1,12 @@
-</header>
-
-<main class="content">
-  <section id="post">
-    <div class="post-contents">
-      <div class="post-image-container">
-        <img src="{{photoURL}}" alt="{{description}}">
-      </div>
-      <div class="post-info-container">
-        <h2>{{description}}</h2>
-        <span class="post-price">${{price}}</span>
-        <span class="post-city">({{city}})</span>
-        <span class="post-condition">Condition: {{condition}}</span>
-      </div>
-    </div>
-  </section>
-</main>
+{{#post}}  
+  <div class="post" data-price="{{price}}" data-city="{{city}}" data-condition="{{condition}}">  
+   <div class="post-contents">  
+    <div class="post-image-container">  
+      <img src="{{photoURL}}" alt="{{description}}">  
+    </div>  
+    <div class="post-info-container">  
+      <a href="#" class="post-title">{{description}}</a> <span class="post-price">${{price}}</span> <span class="post-city">({{city}})</span>  
+    </div>  
+   </div>  
+  </div>  
+{{/post}}
