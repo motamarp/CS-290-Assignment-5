@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "express": "^4.21.1"
+    "handlebars": 4.7.8
   }
 }
