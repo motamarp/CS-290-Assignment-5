@@ -1,14 +1,16 @@
-{
-  "name": "assignment-5",
-  "version": "1.0.0",
-  "description": "Express serving and Handlebars templating",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.21.1"
-    "handlebars": "^4.7.8"
-  }
+{  
+  "name": "assignment-5",  
+  "version": "1.0.0",  
+  "description": "Express serving and Handlebars templating",  
+  "main": "server.js",  
+  "scripts": {  
+   "test": "echo \"Error: no test specified\" && exit 1",  
+   "start": "node server.js",  
+   "build": "handlebars templates/ -f static/templates.js"  
+  },  
+  "dependencies": {  
+   "express": "^4.21.1",  
+   "express-handlebars": "^6.0.6",  
+   "handlebars": "^4.7.8"  
+  }  
 }
