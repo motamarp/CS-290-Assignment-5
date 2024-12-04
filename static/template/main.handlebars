@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{siteTitle}}</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title"><a href="/">{{siteTitle}}</a></h1>
+        <!-- Other header content if needed -->
+    </header>
 
+    <div class="content">
+        <div class="filter-container">
+            {{> filter}} <!-- Include filter partial here -->
+        </div>
+
+        <section id="posts">
+            <!-- Posts will be dynamically inserted here -->
+        </section>
+    </div>
+
+    {{> button}} <!-- Include button partial here -->
+
+    <!-- Modal for adding a post -->
+    <div id="sell-something-modal" class="hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Sell Something</h3>
+                <button id="modal-close" class="modal-hide-button">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="post-input-element">
+                    <label for="post-text-input">Description</label>
+                    <input type="text" id="post-text-input">
+                </div>
+                <div class="post-input-element">
+                    <label for="post-photo-input">Photo URL</label>
+                    <input type="text" id="post-photo-input">
+                </div>
+                <div class="post-input-element">
+                    <label for="post-price-input">Price</label>
+                    <input type="number" id="post-price-input">
+                </div>
+                <div class="post-input-element">
+                    <label for="post-city-input">City</label>
+                    <input type="text" id="post-city-input">
+                </div>
+                <fieldset id="post-condition-fieldset">
+                    <legend>Condition</legend>
+                    <input type="radio" id="condition-new" name="condition" value="New" checked>
+                    <label for="condition-new">New</label>
+                    <input type="radio" id="condition-used" name="condition" value="Used">
+                    <label for="condition-used">Used</label>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-cancel" class="modal-hide-button">Cancel</button>
+                <button id="modal-accept" class="action-button">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-backdrop" class="hidden"></div>
+</body>
+</html>
